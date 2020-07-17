@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form id="form" class="form" action="/api/register" method="POST">
+            <div class="form-control">
+                <label for="username">Username
+                    <img class="fas fa-check-circle" src="../svg/check-circle.svg" alt="">
+                    <img class="fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
+                </label>
+                <input type="text" placeholder="Username" name="username" id="username" required />
+
+
+            </div>
+            <div class="form-control">
+                <label for="password">Password
+                    <img class="fas fa-check-circle" src="../svg/check-circle.svg" alt="">
+                    <img class="fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
+                </label>
+                <input type="password" placeholder="Password" name="password" id="password" minlength="6" maxlength="20"
+                    required />
+
+
+            </div>
+            <div class="form-control">
+                <label for="password2">Confirm password
+                    <img class="fas fa-check-circle" src="../svg/check-circle.svg" alt="">
+                    <img class="fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
+                </label>
+                <input type="password" placeholder="Confirm Password" id="password2" minlength="6" maxlength="20" required />
+
+
+            </div>
+            <button id="submitBtn" type="submit" >Submit</button>
+        </form>
+    </div>
+
+    <script defer src="../js/register.js"></script>
+</body>
+
+</html>
