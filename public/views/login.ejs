@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/register.css">
 
-    <title>Register</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="header">
             <h2 class="info"> <%= err %> </h2>
         </div>
-        <form id="form" class="form" action="/api/register" method="POST">
+        <form id="form" class="form" action="/api/login" method="POST">
             <div class="form-control">
                 <img class="fas fa-check-circle" src="../svg/check-circle.svg" alt="">
                 <img class="fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
@@ -25,16 +25,12 @@
                 <img class="fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
                 <input type="password" placeholder="Password" name="password" id="password"  maxlength="20"required />
             </div>
-            <div class="form-control">
-                <img class="fas fa-check-circle" src="../svg/check-circle.svg" alt="">
-                <img class="fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
-                <input type="password" placeholder="Confirm Password" name="confirmPassword" id="password2" maxlength="20" required />
-            </div>
-            <button id="submitBtn" type="submit" >Submit</button>
+            
+            <button id="submitBtn" type="submit" >Login</button>
         </form>
     </div>
 
-    <script defer src="../js/register.js"></script>
+    <script defer src="../js/login.js"></script>
 </body>
 
 </html>

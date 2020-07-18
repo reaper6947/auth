@@ -23,7 +23,7 @@ username.addEventListener("input", () => {
 
 password.addEventListener("input", () => {
   const passwordValue = password.value.trim();
-  const password2Value = password2.value.trim();
+  
   if (passwordValue.length < 6) {
     setErrorFor(password, "Password cannot be blank or less than 6 characters");
   } else {
@@ -34,17 +34,7 @@ password.addEventListener("input", () => {
   allcorrect()
 });
 
-password2.addEventListener("input", () => {
-  const passwordValue = password.value.trim();
-  const password2Value = password2.value.trim();
-  if (password2Value !== passwordValue) {
-    setErrorFor(password2, "Passwords does not match");
-  } else {
-    setSuccessFor(password2);
-    
-  }
-  allcorrect()
-})
+
 
 
 function allcorrect() {
@@ -53,7 +43,7 @@ function allcorrect() {
     return elem.classList.contains("success");
   }
   
-  if (divs[0].classList.contains("success") && divs[1].classList.contains("success") && divs[2].classList.contains("success")) {
+  if (divs[0].classList.contains("success") && divs[1].classList.contains("success")) {
    
     btn.style.visibility = "visible";
   } else {
