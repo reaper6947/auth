@@ -11,8 +11,7 @@ router.get("/auth", (req, res) => {
     console.log("no username");
     res.redirect("/api/login");
   } else {
-      console.log(req.signedCookies.username + " logged in");
-      res.end();
+      res.send("user " + req.signedCookies.username + " logged in");
   }
 
   
