@@ -147,21 +147,44 @@ body {
 
 
 
-.form button {
+#submitBtn {
 	background-color: #8e44ad ;
 	border: 2px solid #8e44ad;
 	border-radius: 4px;
 	color: aliceblue;
 	display: block;
 	font-family: inherit;
-	font-size: 16px;
-	padding: .7em;
+	font-size: 18px;
+	padding: .5em;
 	margin-top: 1em;
 	width: 100%;
-	visibility: hidden;
+	visibility: visible;
 	font-weight: 500;
 }
 
+#registerBtn {
+	background-color: #8e44ad ;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: aliceblue;
+	display: block;
+	font-family: inherit;
+	font-size: 18px;
+	padding: .5em;
+	margin-top: 1em;
+	width: 100%;
+	visibility: visible;
+	font-weight: 500;
+}
+
+#submitBtn:disabled,
+#registerBtn:disabled
+{
+	background-color:aliceblue;
+  border-color: #a0a0a0;
+  background-color: #a0a0a0;
+  opacity: 0.5;
+}
 
 
 

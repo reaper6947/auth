@@ -7,7 +7,8 @@ const loginCheck = async (req, res, next) => {
     if (userCheck === null) {
       res.render("login", { err: "user doesnt exist, try again" });
     } else if (await bcrypt.compare(req.body.password, userCheck.hashedPassword)) {
-      res.render("login", { err: "Logged in" });
+      req.username = req.body.username;
+      req.hashedPassword = userCheck.hashedPassword;
       next();
     } else {
       res.render("login", { err: "Wrong Password" });

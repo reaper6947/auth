@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "sample nodejs auth server",
   "main": "server.js",
+  
   "scripts": {
     "devStart": "nodemon server.js"
   },

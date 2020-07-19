@@ -56,8 +56,10 @@ function allcorrect() {
   if (divs[0].classList.contains("success") && divs[1].classList.contains("success") && divs[2].classList.contains("success")) {
    
     btn.style.visibility = "visible";
+    btn.disabled = false;
   } else {
-    btn.style.visibility = "hidden";
+   // btn.style.visibility = "hidden";
+    btn.disable = true;
   }
 }
 

@@ -29,8 +29,6 @@ password.addEventListener("input", () => {
   } else {
     setSuccessFor(password);
   }
-  
-
   allcorrect()
 });
 
@@ -46,8 +44,10 @@ function allcorrect() {
   if (divs[0].classList.contains("success") && divs[1].classList.contains("success")) {
    
     btn.style.visibility = "visible";
+    btn.disabled = false;
   } else {
-    btn.style.visibility = "hidden";
+   // btn.style.visibility = "hidden";
+    btn.disabled = true;
   }
 }
 

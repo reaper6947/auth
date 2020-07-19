@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -25,6 +24,10 @@ app.use("/api", require("./routes/registration"));
 // login route
 app.use("/api", require("./routes/login"));
 
+//cookie set
+app.use("/api", require("./routes/authorization"));
+
+// main page 
 
 
 
