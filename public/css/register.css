@@ -1,193 +1,184 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	background-color: #9b59b6;
-	font-family: 'Open Sans', sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	margin: 0;
-	background-image: url("../img/sand.jpg");
-	background-image: url("../img/wood.jpg") ; 
-	background-size: auto;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-    padding: .69em;
-	
+  background-color: #9b59b6;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("../img/sand.webp");
+  background-image: url("../img/wood.webp");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 0.69em;
 }
-
-
-
 
 .container {
-	background-color: #515151;
-	background: inherit;
-	border-radius: 5px;
-	box-shadow: 0 0 .3em .3em rgba(0, 0, 0, 0.4);
-	overflow: hidden;
-	width: 25em;
-    z-index: 1;
-    max-width: 100%;
-	font-weight: 300;
-	
+  background-color: #515151;
+  background: inherit;
+  border-radius: 5px;
+  box-shadow: 0 0 0.3em 0.3em rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  width: 25em;
+  z-index: 1;
+  max-width: 100%;
+  font-weight: 300;
 }
-.container::before{
-	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-	background: inherit;
-	backdrop-filter: blur(5px);
-	content: '';
-	z-index: -1;
-	bottom: 0;
-	top: 0;
-
+.container::before {
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  background: inherit;
+  backdrop-filter: blur(5px);
+  content: "";
+  z-index: -1;
+  bottom: 0;
+  top: 0;
 }
-
-
 
 .header {
-	border-bottom: 1px solid #f0f0f0;
-	background: inherit;
-	padding: .5em 1.3em;
-	opacity: .78;
+  border-bottom: 1px solid #f0f0f0;
+  background: inherit;
+  padding: 0.5em 1.3em;
+  opacity: 0.78;
 }
 
 .header h2 {
-	margin: .4em;
-	text-align: center;
-	opacity: .85;
+  margin: 0.4em;
+  text-align: center;
+  opacity: 0.85;
 }
 
 .form {
-	padding: 1em 3em;	
+  padding: 1em 3em;
 }
 
 .form-control {
-	margin-bottom: .5em;
-	padding-bottom: 1.0em;
-	position: relative;
-	opacity: .85;
+  margin-bottom: 0.5em;
+  padding-bottom: 1em;
+  position: relative;
+  opacity: 0.85;
 }
 
 .form-control label {
-	display: inline-block;
-	margin-bottom: 0.5em;
-	padding: 0;
-	
+  display: inline-block;
+  margin-bottom: 0.5em;
+  padding: 0;
 }
 
 .form-control input {
-	background: inherit;
-	font-weight: 500;
-	border-radius: 4px;
-	display: block;
-	font-family: inherit;
-	font-size: 16px;
-	padding: .5em;
-	width: 100%;
-	outline: 0;
-	border: 0;
-	border: 2px solid rgba(31, 8, 8, 0.5);
-	margin-bottom: .5em;
+  background: inherit;
+  font-weight: 500;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 0.5em;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  border: 2px solid rgba(31, 8, 8, 0.5);
+  margin-bottom: 0.5em;
 }
 
 .form-control input::placeholder {
-	
-	font-family: inherit;
-	font-size: 16px;
-	width: 100%;
-	font-weight: 600;
-	color: #201919;
+  font-family: inherit;
+  font-size: 16px;
+  width: 100%;
+  font-weight: 300;
+  color: #201919;
 }
 
 .form-control input:focus {
-	outline: 0;
-	border-color: #777;
+  outline: 0;
+  border-color: #777;
 }
 
 .form-control.success input {
-	border-color: #2ecc71;
+  border-color: #2ecc71;
 }
 
 .form-control.error input {
-	border-color: #e74c3c;
+  border-color: #e74c3c;
 }
 
-.form-control img {
+.icon {
+	vertical-align: middle;
+  position: relative;
+  display: none;
+  padding-bottom:3px;
+  max-width: 1.1em;
+  background-color:inherit;
+  border-radius: 50%;
+  visibility: hidden;
+}
 
-	position: absolute;
-	display: inline-block;
-	margin-bottom: 0;
-	margin-top: .85em;
-	margin-left: 16em;
-    max-width: 1.1em;
-	background-color: #8e44ad;
-	border-radius: 50%;
-	visibility: hidden;
+.form-control label {
+  padding: 0;
+}
+
+.label-name {
+	font-weight:500;
+	font-size:18px;
+  position: relative;
+  display: inline-block;
+  
+  
 }
 
 .form-control.success img.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
-	display: inline;
-	
+  color: #2ecc71;
+  visibility: visible;
+  display: inline-block;
 }
 
 .form-control.error img.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
-	display: inline;
+  color: #e74c3c;
+  visibility: visible;
+  display: inline-block;
 }
 
-
-
 #submitBtn {
-	background-color: #8e44ad ;
-	border: 2px solid #8e44ad;
-	border-radius: 4px;
-	color: aliceblue;
-	display: block;
-	font-family: inherit;
-	font-size: 18px;
-	padding: .5em;
-	margin-top: 1em;
-	width: 100%;
-	visibility: visible;
-	font-weight: 500;
+  background-color: #8e44ad;
+  border: 2px solid #8e44ad;
+  border-radius: 4px;
+  color: aliceblue;
+  display: block;
+  font-family: inherit;
+  font-size: 18px;
+  padding: 0.5em;
+  margin-top: 1em;
+  width: 100%;
+  visibility: visible;
+  font-weight: 500;
 }
 
 #registerBtn {
-	background-color: #8e44ad ;
-	border: 2px solid #8e44ad;
-	border-radius: 4px;
-	color: aliceblue;
-	display: block;
-	font-family: inherit;
-	font-size: 18px;
-	padding: .5em;
-	margin-top: 1em;
-	width: 100%;
-	visibility: visible;
-	font-weight: 500;
+  background-color: #8e44ad;
+  border: 2px solid #8e44ad;
+  border-radius: 4px;
+  color: aliceblue;
+  display: block;
+  font-family: inherit;
+  font-size: 18px;
+  padding: 0.5em;
+  margin-top: 1em;
+  width: 100%;
+  visibility: visible;
+  font-weight: 500;
 }
 
 #submitBtn:disabled,
-#registerBtn:disabled
-{
-	background-color:aliceblue;
+#registerBtn:disabled {
+  background-color: aliceblue;
   border-color: #a0a0a0;
   background-color: #a0a0a0;
   opacity: 0.5;
 }
-
-
-
-
-
-

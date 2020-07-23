@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="Description" content="login page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/register.css">
 
     <title>Login</title>
@@ -16,22 +18,30 @@
         </div>
         <form id="form" class="form" action="/api/login" method="POST">
             <div class="form-control">
-                <img class="fas fa-check-circle" src="../svg/check-circle.svg" alt="">
-                <img class="fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
+
+                <label for="username">
+                    <div class="label-name">Username</div>
+                    <img class="icon fas fa-check-circle" src="../svg/check-circle.svg" alt="">
+                    <img class=" icon fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
+                </label>
                 <input type="text" placeholder="Username" name="username" id="username" minlength="3" required />
             </div>
             <div class="form-control">
-                <img class="fas fa-check-circle" src="../svg/check-circle.svg" alt="">
-                <img class="fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
-                <input type="password" placeholder="Password" name="password" id="password"  maxlength="20"required />
+
+                <label for="password">
+                    <div class="label-name">Password</div>
+                    <img class=" icon fas fa-check-circle" src="../svg/check-circle.svg" alt="">
+                    <img class=" icon fas fa-exclamation-circle" src="../svg/exclamation-circle.svg" alt="">
+                </label>
+                <input type="password" placeholder="Password" name="password" id="password" maxlength="20" required />
             </div>
-            
-            <button id="submitBtn" type="submit" disabled >Login</button>
-            <button id="registerBtn" type=""  onclick="window.location='/api/register';">no account? register</button>
+
+            <button id="submitBtn" type="submit" disabled>Login</button>
+            <button id="registerBtn" type="" onclick="window.location='/api/register';">no account? register</button>
         </form>
     </div>
 
-    <script defer src="../js/login.js"></script>
+    <script async src="../js/login.js"></script>
 </body>
 
 </html>

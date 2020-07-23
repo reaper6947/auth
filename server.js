@@ -18,6 +18,11 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cookieParser(process.env.SECRET_SALT));
 
+//this is for auto https upgrades for production
+if (process.env.PRODUCTION == "true") { app.all('*', require("./routes/httpsUpgrade")); }
+
+
+
 //registration route
 app.use("/api", require("./routes/registration"));
 
@@ -28,7 +33,9 @@ app.use("/api", require("./routes/login"));
 app.use("/api", require("./routes/authorization"));
 
 // main page 
-
+app.get("/", (req, res) => {
+    res.redirect("/api/auth");
+})
 
 
 const PORT = 3000 || process.env.PORT;
