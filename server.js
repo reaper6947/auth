@@ -3,7 +3,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const bodyParser = require("body-parser");
-
+const helmet = require('helmet')
 //settings templating engine and views path
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/public/views"));
@@ -12,6 +12,7 @@ app.set("views", path.join(__dirname, "/public/views"));
 require("./db")();
 
 //middleware
+app.use(helmet())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
